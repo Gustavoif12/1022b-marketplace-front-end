@@ -1,33 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [produtos, setProdutos] = useState([])
 
-  return (
+  //Uma função e uma condição para chamar a função
+  // [] -> Significa que a condição de executar a função será ao carregar a página
+  useEffect(() => {
+    fetch("https://one022b-marketplace-ienr.onrender.com/produtos")
+      .then(resposta => resposta.json())
+      .then(data => setProdutos(data))
+  }, [])
+  return ( //JSX
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Gustavo Oliveira Silva</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {console.log(produtos)}
     </>
   )
 }
