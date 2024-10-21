@@ -21,8 +21,7 @@ type UsuarioType = {
 function App() {
   const [produtos, setProdutos] = useState<ProdutoType[]>([])
   const [usuarios, setUsuarios] = useState<UsuarioType[]>([])
-  //Uma função e uma condição para chamar a função
-  // [] -> Significa que a condição de executar a função será ao carregar a página
+  //useEffect(O QUe fazer, Quando Fazer)
   useEffect(() => {
     fetch("https://one022b-marketplace-ienr.onrender.com/produtos")
       .then(resposta => resposta.json())
@@ -34,14 +33,14 @@ function App() {
       .then(resposta => resposta.json())
       .then(dados => setUsuarios(dados))
   }, [])
-  return ( // JSX
+  return (
     <>
       <div className="container-produtos">
         {produtos.map(prod => {
           return (
-            <div className="produto-item">
+            <div key={prod.id} className="produto-item">
               <h1>{prod.nome}</h1>
-              <p>{prod.imagem}</p>
+              <img src={prod.imagem} alt="Imagem de celular" />
               <p>{prod.preco}</p>
               <p>{prod.descricao}</p>
             </div>
