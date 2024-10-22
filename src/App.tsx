@@ -40,7 +40,7 @@ function App() {
           return (
             <div key={prod.id} className="produto-item">
               <h1>{prod.nome}</h1>
-              <img src={prod.imagem} alt="Imagem de celular" />
+              <img src={prod.imagem} alt="Imagem de produto" style={{ width: '200px', height: 'auto' }} />
               <p>{prod.preco}</p>
               <p>{prod.descricao}</p>
             </div>
