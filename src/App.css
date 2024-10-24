@@ -1,42 +1,87 @@
+/* Estilos principais */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #ebebeb; /* Fundo cinza claro */
+  color: #1a1a1a; /* Texto escuro para contraste */
+  border-radius: 8px; /* Borda arredondada */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Estilo dos produtos */
+.container-produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Largura mínima dos produtos */
+  gap: 1.5rem;
+  padding: 2rem 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.produto-item {
+  background-color: #e0e7ff; /* Azul suave */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Impede overflow do texto */
+  word-wrap: break-word; /* Permite quebra de palavras longas */
+}
+
+.produto-item h3 {
+  overflow: hidden;
+  white-space: nowrap; /* Não permite quebra de linha no título */
+}
+
+.produto-item:hover {
+  transform: translateY(-5px);
+}
+
+.produto-item img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+/* Estilo dos usuários */
+.container-usuarios {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex; /* Muda para flexbox para itens lado a lado */
+  flex-wrap: wrap; /* Permite que os itens quebrem em nova linha, se necessário */
+  gap: 1.5rem; /* Espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens */
+}
+
+.usuario-item {
+  background-color: #d0d7e3; /* Cinza azulado */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Impede overflow do texto */
+  word-wrap: break-word; /* Permite quebra de palavras longas */
+  flex: 1 1 200px; /* Flexível, ocupa pelo menos 200px */
+  max-width: 250px; /* Largura máxima para os itens */
+}
+
+.usuario-item h3 {
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adiciona "..." se o texto for longo */
+  white-space: nowrap; /* Não permite quebra de linha no título */
+}
+
+.usuario-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-produtos {
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
   }
-  to {
-    transform: rotate(360deg);
+  .container-usuarios {
+    flex-direction: column; /* Muda para coluna em telas menores */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
