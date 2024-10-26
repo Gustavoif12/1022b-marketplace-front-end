@@ -1,36 +1,34 @@
-/* Estilos principais */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #ebebeb; /* Fundo cinza claro */
-  color: #1a1a1a; /* Texto escuro para contraste */
-  border-radius: 8px; /* Borda arredondada */
+  background-color: #ebebeb;
+  color: #1a1a1a;
+  border-radius: 8px;
 }
 
-/* Estilo dos produtos */
 .container-produtos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Largura mínima dos produtos */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   padding: 2rem 0;
 }
 
 .produto-item {
-  background-color: #e0e7ff; /* Azul suave */
+  background-color: #e0e7ff;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: transform 0.3s ease;
-  overflow: hidden; /* Impede overflow do texto */
-  word-wrap: break-word; /* Permite quebra de palavras longas */
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .produto-item h3 {
   overflow: hidden;
-  white-space: nowrap; /* Não permite quebra de linha no título */
+  white-space: nowrap;
 }
 
 .produto-item:hover {
@@ -43,45 +41,44 @@
   margin-bottom: 0.75rem;
 }
 
-/* Estilo dos usuários */
 .container-usuarios {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  display: flex; /* Muda para flexbox para itens lado a lado */
-  flex-wrap: wrap; /* Permite que os itens quebrem em nova linha, se necessário */
-  gap: 1.5rem; /* Espaçamento entre os itens */
-  justify-content: center; /* Centraliza os itens */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
 .usuario-item {
-  background-color: #d0d7e3; /* Cinza azulado */
+  background-color: #d0d7e3;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: left;
   transition: transform 0.3s ease;
-  overflow: hidden; /* Impede overflow do texto */
-  word-wrap: break-word; /* Permite quebra de palavras longas */
-  flex: 1 1 200px; /* Flexível, ocupa pelo menos 200px */
-  max-width: 250px; /* Largura máxima para os itens */
+  overflow: hidden;
+  word-wrap: break-word;
+  flex: 1 1 200px;
+  max-width: 250px;
 }
 
 .usuario-item h3 {
   overflow: hidden;
-  text-overflow: ellipsis; /* Adiciona "..." se o texto for longo */
-  white-space: nowrap; /* Não permite quebra de linha no título */
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .usuario-item:hover {
   transform: translateY(-5px);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .container-produtos {
-    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    grid-template-columns: 1fr;
   }
+
   .container-usuarios {
-    flex-direction: column; /* Muda para coluna em telas menores */
+    flex-direction: column;
   }
 }

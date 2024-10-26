@@ -9,7 +9,6 @@ type ProdutoType = {
   imagem: string
 }
 
-// Definindo o tipo para os dados do usuário
 type UsuarioType = {
   id: number,
   nome: string,
@@ -21,13 +20,13 @@ type UsuarioType = {
 function App() {
   const [produtos, setProdutos] = useState<ProdutoType[]>([])
   const [usuarios, setUsuarios] = useState<UsuarioType[]>([])
-  //useEffect(O QUe fazer, Quando Fazer)
+  //useEffect(O Que fazer, Quando Fazer)
   useEffect(() => {
     fetch("https://one022b-marketplace-ienr.onrender.com/produtos")
       .then(resposta => resposta.json())
       .then(dados => setProdutos(dados))
   }, [])
-  // Requisição para a nova rota de usuários
+  //REQUISIÇÃO PARA A ROTA DE USUÁRIOS
   useEffect(() => {
     fetch("https://one022b-marketplace-ienr.onrender.com/usuarios")
       .then(resposta => resposta.json())
