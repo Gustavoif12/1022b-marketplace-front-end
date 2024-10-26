@@ -12,7 +12,9 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  padding: 2rem 0;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  margin: 0 1rem;
 }
 
 .produto-item {
@@ -42,8 +44,7 @@
 }
 
 .container-usuarios {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -51,7 +52,7 @@
 }
 
 .usuario-item {
-  background-color: #d0d7e3;
+  background-color: #e0e7ff;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -71,6 +72,14 @@
 
 .usuario-item:hover {
   transform: translateY(-5px);
+}
+
+.titulo-lista {
+  text-align: left;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 1rem 1rem;
+  color: #1a1a1a;
 }
 
 @media (max-width: 768px) {
