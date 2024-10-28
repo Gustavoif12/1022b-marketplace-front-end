@@ -33,8 +33,7 @@
 }
 
 .produto-item img {
-  max-width: 80%;    
-  justify-content: center;                      
+  max-width: 65%;                        
   border-radius: 4px;                        
   margin-bottom: 0.75rem;                    
 }
