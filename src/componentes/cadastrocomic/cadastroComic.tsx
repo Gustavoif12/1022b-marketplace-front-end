@@ -25,7 +25,7 @@ export default function CadastroComic() {
             preco: preco,
             imagem: imagem
         };
-        fetch("http://localhost:8000/comics", {
+        fetch("https://one022b-marketplace-ienr.onrender.com/comics", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -19,7 +19,7 @@ export default function ReservaComic() {
             forma_pagamento: formaPagamento,
             data_reserva: dataReserva
         };
-        fetch("http://localhost:8000/reservas", {
+        fetch("https://one022b-marketplace-ienr.onrender.com/reservas", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
