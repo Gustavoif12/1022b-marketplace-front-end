@@ -5,7 +5,7 @@ type ComicType = {
   id: number;
   titulo: string;
   autor: string;
-  ano_de_publicacao: string;
+  ano_de_publicacao: number;
   editora: string;
   sinopse: string;
   preco: string;
