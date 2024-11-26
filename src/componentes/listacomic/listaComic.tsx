@@ -4,14 +4,14 @@ export default function ListaComic() {
     const [comics, setComics] = useState<any[]>([]);
 
     useEffect(() => {
-        fetch("https://one022b-marketplace-ienr.onrender.com/comics")
+        fetch("http://localhost:8000/comics")
             .then(response => response.json())
             .then(data => setComics(data));
     }, []);
 
     return (
         <>
-            <h1>Listar Comics</h1>
+            <h1>Comics Cadastradas</h1>
             <ul>
                 {comics.map((comic) => (
                     <li key={comic.id}>

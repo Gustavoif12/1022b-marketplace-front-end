@@ -19,7 +19,7 @@ export default function ReservaComic() {
             forma_pagamento: formaPagamento,
             data_reserva: dataReserva
         };
-        fetch("https://one022b-marketplace-ienr.onrender.com/reservas", {
+        fetch("http://localhost:8000/reservas", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -57,7 +57,7 @@ export default function ReservaComic() {
 
     return (
         <>
-            <h1>Tela Reservar Comics</h1>
+            <h1>Reservar Comics</h1>
             <form onSubmit={handleForm}>
                 <div>
                     <label htmlFor="id">ID</label>

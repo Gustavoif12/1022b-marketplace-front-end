@@ -5,11 +5,11 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
-import CadastroComic from './componentes/cadastrocomic/cadastroComic.tsx';
-import ListaComic from './componentes/listacomic/listaComic.tsx';
-import ReservaComic from './componentes/reservacomic/reservaComic.tsx';
-import ListaReserva from './componentes/listareserva/listaReserva.tsx';
+} from "react-router-dom"
+import CadastroComic from './componentes/cadastrocomic/cadastroComic.tsx'
+import ListaComic from './componentes/listacomic/listaComic.tsx'
+import ReservaComic from './componentes/reservacomic/reservaComic.tsx'
+import ListaReserva from './componentes/listareserva/listaReserva.tsx'
 
 const router = createBrowserRouter([
   {

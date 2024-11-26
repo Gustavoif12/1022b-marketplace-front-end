@@ -25,7 +25,7 @@ export default function CadastroComic() {
             preco: preco,
             imagem: imagem
         };
-        fetch("https://one022b-marketplace-ienr.onrender.com/comics", {
+        fetch("http://localhost:8000/comics", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -75,7 +75,7 @@ export default function CadastroComic() {
 
     return (
         <>
-            <h1>Tela Cadastrar Comics</h1>
+            <h1>Cadastrar Comics</h1>
             <form onSubmit={handleForm}>
                 <div>
                     <label htmlFor="id">ID</label>

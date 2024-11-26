@@ -4,14 +4,14 @@ export default function ListaReserva() {
     const [reservas, setReservas] = useState<any[]>([]);
 
     useEffect(() => {
-        fetch("https://one022b-marketplace-ienr.onrender.com/reservas")
+        fetch("http://localhost:8000/reservas")
             .then(response => response.json())
             .then(data => setReservas(data));
     }, []);
 
     return (
         <>
-            <h1>Listar Reservas</h1>
+            <h1>Comics Reservadas</h1>
             <ul>
                 {reservas.map((reserva) => (
                     <li key={reserva.id}>
