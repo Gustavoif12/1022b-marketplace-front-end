@@ -1,67 +1,75 @@
-import { useEffect, useState } from 'react'
-import './App.css'
+import { useEffect, useState } from 'react';
+import './App.css';
 
-type ProdutoType = {
-  id: number,
-  nome: string,
-  descricao: string,
-  preco: string,
-  imagem: string
-}
+type ComicType = {
+  id: number;
+  titulo: string;
+  autor: string;
+  ano_de_publicacao: string;
+  editora: string;
+  sinopse: string;
+  preco: string;
+  imagem: string;
+};
 
-type UsuarioType = {
-  id: number,
-  nome: string,
-  email: string,
-  created_at: string,
-  updated_at: string
-}
+type ReservaType = {
+  id: number;
+  nome_comprador: string;
+  titulo_comic: string;
+  forma_pagamento: string;
+  data_reserva: string;
+};
 
 function App() {
-  const [produtos, setProdutos] = useState<ProdutoType[]>([])
-  const [usuarios, setUsuarios] = useState<UsuarioType[]>([])
-  //useEffect(O Que fazer, Quando Fazer)
+  const [comics, setComics] = useState<ComicType[]>([]);
+  const [reservas, setReservas] = useState<ReservaType[]>([]);
+
   useEffect(() => {
-    fetch("https://one022b-marketplace-ienr.onrender.com/produtos")
+    fetch("https://one022b-marketplace-ienr.onrender.com/comics")
       .then(resposta => resposta.json())
-      .then(dados => setProdutos(dados))
-  }, [])
-  //REQUISIÇÃO PARA A ROTA DE USUÁRIOS
+      .then(dados => setComics(dados));
+  }, []);
+
   useEffect(() => {
-    fetch("https://one022b-marketplace-ienr.onrender.com/usuarios")
+    fetch("https://one022b-marketplace-ienr.onrender.com/reservas")
       .then(resposta => resposta.json())
-      .then(dados => setUsuarios(dados))
-  }, [])
+      .then(dados => setReservas(dados));
+  }, []);
+
   return (
     <>
-      <h2 className="titulo-lista">Lista de Produtos</h2>
-      <div className="container-produtos">
-        {produtos.map(prod => {
+      <h2 className="titulo-lista">Lista de Comics</h2>
+      <div className="container-comics">
+        {comics.map(comic => {
           return (
-            <div key={prod.id} className="produto-item">
-              <h1>{prod.nome}</h1>
-              <img src={prod.imagem} alt="Imagem de celular" />
-              <p>{prod.preco}</p>
-              <p>{prod.descricao}</p>
+            <div key={comic.id} className="comic-item">
+              <h1>{comic.titulo}</h1>
+              <img src={comic.imagem} alt={comic.titulo} />
+              <p>Autor: {comic.autor}</p>
+              <p>Ano de Publicação: {comic.ano_de_publicacao}</p>
+              <p>Editora: {comic.editora}</p>
+              <p>Preço: {comic.preco}</p>
+              <p>Sinopse: {comic.sinopse}</p>
             </div>
-          )
+          );
         })}
       </div>
-      <h2 className="titulo-lista">Lista de Usuários</h2>
-      <div className="container-usuarios">
-        {usuarios.map(usua => {
+
+      <h2 className="titulo-lista">Lista de Reservas</h2>
+      <div className="container-reservas">
+        {reservas.map(reserva => {
           return (
-            <div className="usuario-item">
-              <h1>{usua.nome}</h1>
-              <p>{usua.email}</p>
-              <p>{usua.created_at}</p>
-              <p>{usua.updated_at}</p>
+            <div key={reserva.id} className="reserva-item">
+              <h1>{reserva.nome_comprador}</h1>
+              <p>Comic: {reserva.titulo_comic}</p>
+              <p>Forma de Pagamento: {reserva.forma_pagamento}</p>
+              <p>Data da Reserva: {reserva.data_reserva}</p>
             </div>
-          )
+          );
         })}
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

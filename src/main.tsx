@@ -6,18 +6,31 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import CadastroProduto from './componentes/cadastroproduto/cadastroProduto.tsx';
+import CadastroComic from './componentes/cadastrocomic/cadastroComic.tsx';
+import ListaComic from './componentes/listacomic/listaComic.tsx';
+import ReservaComic from './componentes/reservacomic/reservaComic.tsx';
+import ListaReserva from './componentes/listareserva/listaReserva.tsx';
 
-//Crie um comentário explicando o que faz o código abaixo
-//Cria uma instância do BrowserRouter e passa um array de objetos com as rotas da aplicação
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
   {
-    path: "/cadastro-produto",
-    element: <CadastroProduto />,
+    path: "/cadastro-comic",
+    element: <CadastroComic />,
+  },
+  {
+    path: "/lista-comic",
+    element: <ListaComic />,
+  },
+  {
+    path: "/reserva-comic",
+    element: <ReservaComic />,
+  },
+  {
+    path: "/lista-reserva",
+    element: <ListaReserva />,
   },
 ]);
 
