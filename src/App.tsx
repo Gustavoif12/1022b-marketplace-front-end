@@ -18,7 +18,7 @@ function App() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("https://one022b-marketplace-ienr.onrender.com/comics")
+        fetch("http://localhost:8000/comics")
             .then(resposta => resposta.json())
             .then(dados => setComics(dados));
     }, []);
