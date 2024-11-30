@@ -27,10 +27,10 @@ export default function ReservaComic() {
             body: JSON.stringify(reserva)
         }).then(response => {
             if (response.status === 201) {
-                alert("Reserva feita com sucesso");
-                navigate("/");
+                alert("Reserva feita com sucesso!");
+                navigate("/home");
             } else {
-                alert("Erro ao fazer reserva");
+                alert("Erro ao fazer reserva!");
             }
         });
     }

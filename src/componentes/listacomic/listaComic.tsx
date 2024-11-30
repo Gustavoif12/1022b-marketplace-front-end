@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function ListaComic() {
     const [comics, setComics] = useState<any[]>([]);
@@ -20,10 +21,11 @@ export default function ListaComic() {
                         <p>Ano de Publicação: {comic.ano_de_publicacao}</p>
                         <p>Editora: {comic.editora}</p>
                         <p>Preço: {comic.preco}</p>
-                        <img src={comic.imagem} alt={comic.titulo} width={100} />
+                        <img src={comic.imagem} alt={comic.titulo} />
                     </li>
                 ))}
             </ul>
+            <Link to="/home">Voltar para Home</Link>
         </>
     );
 }

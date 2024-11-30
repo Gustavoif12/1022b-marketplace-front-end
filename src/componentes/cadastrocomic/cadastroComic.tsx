@@ -33,10 +33,10 @@ export default function CadastroComic() {
             body: JSON.stringify(comic)
         }).then(response => {
             if (response.status === 201) {
-                alert("Comic cadastrada com sucesso");
-                navigate("/");
+                alert("Comic cadastrada com sucesso!");
+                navigate("/home");
             } else {
-                alert("Erro ao cadastrar comic");
+                alert("Erro ao cadastrar comic!");
             }
         });
     }

@@ -13,7 +13,7 @@ import ListaReserva from './componentes/listareserva/listaReserva.tsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <App />,
   },
   {
