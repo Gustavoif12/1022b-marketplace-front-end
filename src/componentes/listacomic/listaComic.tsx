@@ -25,7 +25,9 @@ export default function ListaComic() {
                     </li>
                 ))}
             </ul>
-            <Link to="/home">Voltar para Home</Link>
+            <Link to="/home" className="botao-voltar">
+                Voltar para Home
+            </Link>
         </>
     );
 }

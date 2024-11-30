@@ -23,7 +23,9 @@ export default function ListaReserva() {
                     </li>
                 ))}
             </ul>
-            <Link to="/home">Voltar para Home</Link>
+            <Link to="/home" className="botao-voltar">
+                Voltar para Home
+            </Link>
         </>
     );
 }
