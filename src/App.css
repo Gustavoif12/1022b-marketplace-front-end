@@ -1,151 +1,150 @@
-/*body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Reset de margens e padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.site-header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
+/* Estilos gerais */
+body {
+    font-family: 'Comic', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column; /* Coloca os elementos um abaixo do outro */
+    padding: 0; /* Remove padding do body */
+    width: 100%; /* Garante que o body ocupe toda a largura */
+}
+
+h2.titulo-lista {
+    font-size: 2rem;
     text-align: center;
+    margin-top: 80px; /* Espaço adequado entre o cabeçalho e o título */
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Cabeçalho e navegação */
+.site-header {
+    background-color: #364457;
+    margin-top: 0;
+    padding: 15px 0;
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura da página */
+    position: absolute; /* Faz o cabeçalho ficar fixo no topo da página */
+    top: 0; /* Alinha o cabeçalho ao topo */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    z-index: 10; /* Garante que o cabeçalho esteja acima dos outros elementos */
 }
 
 .navigation ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    line-height: 1.6;
     display: flex;
     justify-content: center;
+    gap: 15px;
 }
 
 .navigation li {
-    margin: 0 1rem;
+    font-size: 1rem;
 }
 
 .navigation a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 .navigation a:hover {
-    background-color: #555;
+    color: #f4f4f4;
 }
 
-.titulo-lista {
-    text-align: center;
-    margin: 2rem 0;
-    color: #333;
-}
-
+/* Contêiner de comics */
 .container-comics {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px; /* Deixa um espaço abaixo do cabeçalho fixo */
+    margin-bottom: 30px;
 }
 
 .comic-item {
     background-color: white;
-    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    max-width: 300px;
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.comic-item:hover {
+    transform: translateY(-10px);
 }
 
 .comic-item h1 {
     font-size: 1.5rem;
     color: #333;
+    margin-bottom: 10px;
 }
 
 .comic-item img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 1rem;
-    border-radius: 4px;
+    border-radius: 5px;
+    margin: 10px 0;
 }
 
 .comic-item p {
-    color: #666;
-    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+    text-align: justify;
 }
 
+/* Botão de reserva */
 .botao-reservar {
-    background-color: #ff6f61;
+    display: inline-block;
+    background-color: #364457;
     color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 15px;
+    transition: background-color 0.3s;
 }
 
 .botao-reservar:hover {
-    background-color: #ff3b2f;
+    background-color: #218838;
 }
 
-form {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 2rem auto;
+.botao-reservar:active {
+    background-color: #1e7e34;
 }
 
-form h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
 
-form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #666;
-}
+    .titulo-lista {
+        font-size: 1.8rem;
+    }
 
-form input,
-form textarea,
-form select {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-}
+    .container-comics {
+        grid-template-columns: 1fr;
+    }
 
-form input:focus,
-form textarea:focus,
-form select:focus {
-    border-color: #3b82f6;
-    outline: none;
-}
+    .navigation ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-form textarea {
-    resize: vertical;
+    .navigation a {
+        font-size: 1.1rem;
+    }
 }
-
-form button {
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: block;
-    width: 100%;
-}
-
-form button:hover {
-    background-color: #ff3b2f;
-}
-*/
