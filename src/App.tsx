@@ -22,7 +22,7 @@ function App() {
             .then(setComics);
     }, []);
     useEffect(() => {
-        fetch("https://1022b-marketplace-front-end-yl1n.vercel.app/comics")
+        fetch("https://one022b-marketplace-ienr.onrender.com/comics")
             .then(res => res.json())
             .then(setComics);
     }, []);
