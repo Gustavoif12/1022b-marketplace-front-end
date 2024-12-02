@@ -13,18 +13,28 @@ type ComicType = {
     imagem: string;
 };
 
+type ReservaType = {
+    id: number;
+    nome_comprador: string;
+    titulo_comic: string;
+    forma_pagamento: string;
+    data_reserva: string;
+  };
+
 function App() {
     const [comics, setComics] = useState<ComicType[]>([]);
-
+    const [, setReservas] = useState<ReservaType[]>([]);
+  
     useEffect(() => {
-        fetch("http://localhost:8000/comics")
-            .then(res => res.json())
-            .then(setComics);
+      fetch("https://one022b-marketplace-ienr.onrender.com/comics")
+        .then(resposta => resposta.json())
+        .then(dados => setComics(dados));
     }, []);
+  
     useEffect(() => {
-        fetch("https://one022b-marketplace-ienr.onrender.com/comics")
-            .then(res => res.json())
-            .then(setComics);
+      fetch("https://one022b-marketplace-ienr.onrender.com/reservas")
+        .then(resposta => resposta.json())
+        .then(dados => setReservas(dados));
     }, []);
 
     return (
