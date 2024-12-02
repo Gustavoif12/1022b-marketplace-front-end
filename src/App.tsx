@@ -23,18 +23,11 @@ type ReservaType = {
 
 function App() {
     const [comics, setComics] = useState<ComicType[]>([]);
-    const [, setReservas] = useState<ReservaType[]>([]);
   
     useEffect(() => {
       fetch("https://one022b-marketplace-ienr.onrender.com/comics")
         .then(resposta => resposta.json())
         .then(dados => setComics(dados));
-    }, []);
-  
-    useEffect(() => {
-      fetch("https://one022b-marketplace-ienr.onrender.com/reservas")
-        .then(resposta => resposta.json())
-        .then(dados => setReservas(dados));
     }, []);
 
     return (
