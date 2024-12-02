@@ -34,7 +34,6 @@ function App() {
                         <li><Link to="/reserva-comic">Cadastrar Reserva</Link></li>
                     </ul>
                 </nav>
-                <div className="btn-modo-escuro-claro"></div>
             </header>
 
             <h1 className="titulo-lista">X - Comic</h1>
