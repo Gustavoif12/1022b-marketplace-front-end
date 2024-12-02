@@ -13,14 +13,6 @@ type ComicType = {
     imagem: string;
 };
 
-type ReservaType = {
-    id: number;
-    nome_comprador: string;
-    titulo_comic: string;
-    forma_pagamento: string;
-    data_reserva: string;
-  };
-
 function App() {
     const [comics, setComics] = useState<ComicType[]>([]);
   
