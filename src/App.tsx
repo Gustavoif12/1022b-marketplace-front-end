@@ -15,6 +15,7 @@ type ComicType = {
 
 function App() {
     const [comics, setComics] = useState<ComicType[]>([]);
+    const [reservas, setReservas] = useState<ComicType[]>([]);
 
     useEffect(() => {
         fetch("http://localhost:8000/comics")
@@ -25,6 +26,11 @@ function App() {
         fetch("https://one022b-marketplace-ienr.onrender.com/comics")
             .then(res => res.json())
             .then(setComics);
+    }, []);
+    useEffect(() => {
+        fetch("https://one022b-marketplace-ienr.onrender.com/reservas")
+            .then(res => res.json())
+            .then(setReservas);
     }, []);
 
     return (
