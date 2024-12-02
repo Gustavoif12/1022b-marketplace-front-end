@@ -43,11 +43,13 @@ function App() {
                     <div key={comic.id} className="comic-item">
                         <h1>{comic.titulo}</h1>
                         <img src={comic.imagem} alt={comic.titulo} />
-                        <p>Autor: {comic.autor}</p>
-                        <p>Ano de Publicação: {comic.ano_de_publicacao}</p>
-                        <p>Editora: {comic.editora}</p>
-                        <p>Preço: {comic.preco}</p>
-                        <p>Sinopse: {comic.sinopse}</p>
+                        <div className="p-container">
+                            <p>Autor: {comic.autor}</p>
+                            <p>Ano de Publicação: {comic.ano_de_publicacao}</p>
+                            <p>Editora: {comic.editora}</p>
+                            <p>Preço: {comic.preco}</p>
+                            <p>Sinopse: {comic.sinopse}</p>
+                        </div>
                         <Link to="/reserva-comic" className="botao-reservar">
                             Reservar
                         </Link>
