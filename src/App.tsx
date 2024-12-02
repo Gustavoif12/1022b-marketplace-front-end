@@ -36,7 +36,7 @@ function App() {
                 </nav>
             </header>
 
-            <h2 className="titulo-lista">X - Comic</h2>
+            <h1 className="titulo-lista">X - Comic</h1>
 
             <div className="container-comics">
                 {comics.map(comic => (

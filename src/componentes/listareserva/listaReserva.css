@@ -1,0 +1,96 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
+.lista-reserva-container {
+  max-width: 1200px;
+  margin: 20px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #364457;
+  font-size: 2em;
+  margin: 25px;
+  font-weight: 600;
+}
+
+.lista-reserva-container ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.lista-reserva-container li {
+  flex: 1 1 280px;
+  background-color: #f9f9ff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: block;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lista-reserva-container li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.lista-reserva-container h2 {
+  font-size: 1.4em;
+  color: #364457;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.lista-reserva-container p {
+  margin: 10px 0;
+  color: #555;
+  text-align: justify;
+  font-size: 1em;
+}
+
+.lista-reserva-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+a.botao-voltar {
+  display: block;
+  text-align: center;
+  background-color: #364457;
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  width: 220px;
+  margin: 30px auto;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+a.botao-voltar:hover {
+  background-color: #2b3443;
+  transform: translateY(-2px);
+}
+
+a.botao-voltar:active {
+  transform: translateY(2px);
+}

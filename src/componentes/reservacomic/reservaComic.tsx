@@ -1,5 +1,6 @@
 import { FormEvent, useState, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
+import './reservaComic.css'
 
 export default function ReservaComic() {
     const navigate = useNavigate();
@@ -58,31 +59,33 @@ export default function ReservaComic() {
     return (
         <>
             <h1>Reservar Comics</h1>
-            <form onSubmit={handleForm}>
-                <div>
-                    <label htmlFor="id">ID</label>
-                    <input type="text" name="id" onChange={handleId} />
-                </div>
-                <div>
-                    <label htmlFor="nomeComprador">Nome do Comprador</label>
-                    <input type="text" name="nomeComprador" onChange={handleNomeComprador} />
-                </div>
-                <div>
-                    <label htmlFor="tituloComic">Título do Comic</label>
-                    <input type="text" name="tituloComic" onChange={handleTituloComic} />
-                </div>
-                <div>
-                    <label htmlFor="formaPagamento">Forma de Pagamento</label>
-                    <input type="text" name="formaPagamento" onChange={handleFormaPagamento} />
-                </div>
-                <div>
-                    <label htmlFor="dataReserva">Data da Reserva</label>
-                    <input type="text" name="dataReserva" onChange={handleDataReserva} />
-                </div>
-                <div>
-                    <input type="submit" value="Reservar" />
-                </div>
-            </form>
+            <div className="reserva-comic-container">
+                <form onSubmit={handleForm}>
+                    <div>
+                        <label htmlFor="id">ID</label>
+                        <input type="text" name="id" onChange={handleId} />
+                    </div>
+                    <div>
+                        <label htmlFor="nomeComprador">Nome do Comprador</label>
+                        <input type="text" name="nomeComprador" onChange={handleNomeComprador} />
+                    </div>
+                    <div>
+                        <label htmlFor="tituloComic">Título do Comic</label>
+                        <input type="text" name="tituloComic" onChange={handleTituloComic} />
+                    </div>
+                    <div>
+                        <label htmlFor="formaPagamento">Forma de Pagamento</label>
+                        <input type="text" name="formaPagamento" onChange={handleFormaPagamento} />
+                    </div>
+                    <div>
+                        <label htmlFor="dataReserva">Data da Reserva</label>
+                        <input type="text" name="dataReserva" onChange={handleDataReserva} />
+                    </div>
+                    <div>
+                        <input type="submit" value="Reservar" />
+                    </div>
+                </form>
+            </div>
         </>
     );
 }

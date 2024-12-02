@@ -1,5 +1,6 @@
 import { FormEvent, useState, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
+import './cadastroComic.css'
 
 export default function CadastroComic() {
     const navigate = useNavigate();
@@ -76,43 +77,45 @@ export default function CadastroComic() {
     return (
         <>
             <h1>Cadastrar Comics</h1>
-            <form onSubmit={handleForm}>
-                <div>
-                    <label htmlFor="id">ID</label>
-                    <input type="text" name="id" onChange={handleId} />
-                </div>
-                <div>
-                    <label htmlFor="titulo">Título</label>
-                    <input type="text" name="titulo" onChange={handleTitulo} />
-                </div>
-                <div>
-                    <label htmlFor="autor">Autor</label>
-                    <input type="text" name="autor" onChange={handleAutor} />
-                </div>
-                <div>
-                    <label htmlFor="anoDePublicacao">Ano de Publicação</label>
-                    <input type="text" name="anoDePublicacao" onChange={handleAnoDePublicacao} />
-                </div>
-                <div>
-                    <label htmlFor="editora">Editora</label>
-                    <input type="text" name="editora" onChange={handleEditora} />
-                </div>
-                <div>
-                    <label htmlFor="sinopse">Sinopse</label>
-                    <input type="text" name="sinopse" onChange={handleSinopse} />
-                </div>
-                <div>
-                    <label htmlFor="preco">Preço</label>
-                    <input type="text" name="preco" onChange={handlePreco} />
-                </div>
-                <div>
-                    <label htmlFor="imagem">Imagem</label>
-                    <input type="text" name="imagem" onChange={handleImagem} />
-                </div>
-                <div>
-                    <input type="submit" value="Cadastrar" />
-                </div>
-            </form>
+            <div className="cadastro-comic-container">
+                <form onSubmit={handleForm}>
+                    <div>
+                        <label htmlFor="id">ID</label>
+                        <input type="text" name="id" onChange={handleId} />
+                    </div>
+                    <div>
+                        <label htmlFor="titulo">Título</label>
+                        <input type="text" name="titulo" onChange={handleTitulo} />
+                    </div>
+                    <div>
+                        <label htmlFor="autor">Autor</label>
+                        <input type="text" name="autor" onChange={handleAutor} />
+                    </div>
+                    <div>
+                        <label htmlFor="anoDePublicacao">Ano de Publicação</label>
+                        <input type="text" name="anoDePublicacao" onChange={handleAnoDePublicacao} />
+                    </div>
+                    <div>
+                        <label htmlFor="editora">Editora</label>
+                        <input type="text" name="editora" onChange={handleEditora} />
+                    </div>
+                    <div>
+                        <label htmlFor="sinopse">Sinopse</label>
+                        <input type="text" name="sinopse" onChange={handleSinopse} />
+                    </div>
+                    <div>
+                        <label htmlFor="preco">Preço</label>
+                        <input type="text" name="preco" onChange={handlePreco} />
+                    </div>
+                    <div>
+                        <label htmlFor="imagem">Imagem</label>
+                        <input type="text" name="imagem" onChange={handleImagem} />
+                    </div>
+                    <div>
+                        <input type="submit" value="Cadastrar" />
+                    </div>
+                </form>
+            </div>
         </>
     );
 }
