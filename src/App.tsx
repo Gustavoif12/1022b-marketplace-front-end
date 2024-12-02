@@ -1,66 +1,61 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 
+// Tipo para comics
 type ComicType = {
-    id: number;
-    titulo: string;
-    autor: string;
-    ano_de_publicacao: number;
-    editora: string;
-    sinopse: string;
-    preco: string;
-    imagem: string;
+  id: number;
+  titulo: string;
+  autor: string;
+  ano_de_publicacao: string;
+  editora: string;
+  sinopse: string;
+  preco: string;
+  imagem: string;
 };
 
 function App() {
-    const [comics, setComics] = useState<ComicType[]>([]);
+  const [comics, setComics] = useState<ComicType[]>([]);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        fetch("http://localhost:8000/comics")
-            .then(res => res.json())
-            .then(setComics);
-    }, []);
-    useEffect(() => {
-        fetch("https://one022b-marketplace-ienr.onrender.com/comics")
-            .then(res => res.json())
-            .then(setComics);
-    }, []);
+  useEffect(() => {
+    // Buscar comics
+    fetch('http://localhost:8000/comics')
+      .then((res) => res.json())
+      .then((data) => setComics(data));
+  }, []);
 
-    return (
-        <>
-            <header className="site-header">
-                <nav className="navigation">
-                    <ul>
-                        <li><Link to="/home">Home</Link></li>
-                        <li><Link to="/lista-comic">Comics</Link></li>
-                        <li><Link to="/lista-reserva">Reservas</Link></li>
-                        <li><Link to="/cadastro-comic">Cadastrar Comic</Link></li>
-                        <li><Link to="/reserva-comic">Cadastrar Reserva</Link></li>
-                    </ul>
-                </nav>
-            </header>
+  return (
+    <>
+      {/* Header */}
+      <header className="site-header">
+        <nav className="navigation">
+          <ul>
+            <li><a onClick={() => navigate('/')}>Home</a></li>
+            <li><a onClick={() => navigate('/comics')}>Comics</a></li>
+            <li><a onClick={() => navigate('/cadastro-comic')}>Cadastrar Comic</a></li>
+            <li><a onClick={() => navigate('/cadastro-reserva')}>Cadastrar Reserva</a></li>
+          </ul>
+        </nav>
+      </header>
 
-            <h1 className="titulo-lista">X - Comic</h1>
-
-            <div className="container-comics">
-                {comics.map(comic => (
-                    <div key={comic.id} className="comic-item">
-                        <h1>{comic.titulo}</h1>
-                        <img src={comic.imagem} alt={comic.titulo} />
-                        <p>Autor: {comic.autor}</p>
-                        <p>Ano de Publicação: {comic.ano_de_publicacao}</p>
-                        <p>Editora: {comic.editora}</p>
-                        <p>Preço: {comic.preco}</p>
-                        <p>Sinopse: {comic.sinopse}</p>
-                        <Link to="/reserva-comic" className="botao-reservar">
-                            Reservar
-                        </Link>
-                    </div>
-                ))}
+      {/* Listagem de Comics */}
+      <div className="comics-container">
+        <h1 className='titulo-comics'>Comics</h1>
+        <div className="comics-list">
+          {comics.map((comic) => (
+            <div key={comic.id} className="comic-item">
+              <h3>{comic.titulo}</h3>
+              <img src={comic.imagem} alt={comic.titulo} />
+              <p>Autor: {comic.autor}</p>
+              <p>Preço: {comic.preco}</p>
+              <button onClick={() => navigate(`/cadastro-reserva?id=${comic.id}`)}>Reservar</button>
             </div>
-        </>
-    );
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default App;
