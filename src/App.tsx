@@ -17,7 +17,7 @@ function App() {
     const [comics, setComics] = useState<ComicType[]>([]);
 
     useEffect(() => {
-        fetch("https://one022b-marketplace-ienr.onrender.com/comics")
+        fetch("http://localhost:8000/comics")
             .then(res => res.json())
             .then(setComics);
     }, []);

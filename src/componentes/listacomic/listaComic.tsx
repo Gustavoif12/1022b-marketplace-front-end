@@ -6,7 +6,7 @@ export default function ListaComic() {
     const [comics, setComics] = useState<any[]>([]);
 
     useEffect(() => {
-        fetch("https://one022b-marketplace-ienr.onrender.com/comics")
+        fetch("http://localhost:8000/comics")
             .then(response => response.json())
             .then(data => setComics(data));
     }, []);
