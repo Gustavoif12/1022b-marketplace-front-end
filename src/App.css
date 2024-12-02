@@ -6,26 +6,37 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f4f4;
+    background: #282828;
     color: #333;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     min-height: 100vh;
     margin: 0;
     flex-direction: column;
 }
 
+/*
+.btn-modo-escuro-claro {
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}*/
+
 h1.titulo-lista {
     font-size: 2rem;
     text-align: center;
     margin: 100px 0 40px;
-    color: #364457;
+    color: #9E4DDD;
     font-weight: 600;
 }
 
 .site-header {
-    background-color: #364457;
+    background-color: #9E4DDD;
     padding: 15px 0 17px;
     width: 100%;
     position: fixed;
@@ -71,7 +82,7 @@ h1.titulo-lista {
 }
 
 .comic-item {
-    background-color: white;
+    background-color: #111;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -86,7 +97,7 @@ h1.titulo-lista {
 
 .comic-item h1 {
     font-size: 1.6rem;
-    color: #364457;
+    color: #9E4DDD;
     margin: 10px 0;
     font-weight: 600;
     text-align: center;
@@ -112,14 +123,14 @@ h1.titulo-lista {
 
 .comic-item p {
     font-size: 1rem;
-    color: #333;
+    color: #ffffff;
     margin: 5px 0;
     text-align: justify;
 }
 
 .botao-reservar {
     display: block;
-    background-color: #364457;
+    background-color: #9E4DDD;
     color: white;
     padding: 12px 25px;
     text-decoration: none;

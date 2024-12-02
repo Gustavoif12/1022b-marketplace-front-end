@@ -1,4 +1,4 @@
-body {
+/*body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f7f7f7;
   display: flex;
@@ -6,7 +6,7 @@ body {
   min-height: 100vh;
   margin: 0;
   color: #333;
-}
+}*/
 
 .lista-comic-container {
   max-width: 1200px;
