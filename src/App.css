@@ -26,7 +26,7 @@ h1.titulo-lista {
 
 .site-header {
     background-color: #364457;
-    padding: 15px 0;
+    padding: 15px 0 17px;
     width: 100%;
     position: fixed;
     top: 0;
