@@ -21,6 +21,11 @@ function App() {
             .then(res => res.json())
             .then(setComics);
     }, []);
+    useEffect(() => {
+        fetch("https://1022b-marketplace-front-end-yl1n.vercel.app/comics")
+            .then(res => res.json())
+            .then(setComics);
+    }, []);
 
     return (
         <>
