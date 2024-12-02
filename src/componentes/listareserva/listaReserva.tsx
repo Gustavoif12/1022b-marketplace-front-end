@@ -26,7 +26,7 @@ export default function ListaReserva() {
                     ))}
                 </ul>
             </div>
-            <Link to="/home" className="botao-voltar">
+            <Link to="/" className="botao-voltar">
                 Voltar para Home
             </Link>
         </>

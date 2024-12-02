@@ -21,18 +21,13 @@ function App() {
             .then(res => res.json())
             .then(setComics);
     }, []);
-    useEffect(() => {
-        fetch("https://one022b-marketplace-ienr.onrender.com/comics")
-            .then(res => res.json())
-            .then(setComics);
-    }, []);
 
     return (
         <>
             <header className="site-header">
                 <nav className="navigation">
                     <ul>
-                        <li><Link to="/home">Home</Link></li>
+                        <li><Link to="/">Home</Link></li>
                         <li><Link to="/lista-comic">Comics</Link></li>
                         <li><Link to="/lista-reserva">Reservas</Link></li>
                         <li><Link to="/cadastro-comic">Cadastrar Comic</Link></li>
