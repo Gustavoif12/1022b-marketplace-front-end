@@ -19,11 +19,11 @@ export default function ListaComic() {
                     {comics.map((comic) => (
                         <li key={comic.id}>
                             <h2>{comic.titulo}</h2>
+                            <img src={comic.imagem} alt={comic.titulo} />
                             <p>Autor: {comic.autor}</p>
                             <p>Ano de Publicação: {comic.ano_de_publicacao}</p>
                             <p>Editora: {comic.editora}</p>
                             <p>Preço: {comic.preco}</p>
-                            <img src={comic.imagem} alt={comic.titulo} />
                         </li>
                     ))}
                 </ul>
