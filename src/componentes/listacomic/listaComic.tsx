@@ -20,10 +20,10 @@ export default function ListaComic() {
                         <li key={comic.id}>
                             <h2>{comic.titulo}</h2>
                             <img src={comic.imagem} alt={comic.titulo} />
-                            <p>Autor: {comic.autor}</p>
-                            <p>Ano de Publicação: {comic.ano_de_publicacao}</p>
-                            <p>Editora: {comic.editora}</p>
-                            <p>Preço: {comic.preco}</p>
+                            <p><b>Autor:</b> {comic.autor}</p>
+                            <p><b>Ano de Publicação:</b> {comic.ano_de_publicacao}</p>
+                            <p><b>Editora:</b> {comic.editora}</p>
+                            <p><b>Preço:</b> R$ {comic.preco}</p>
                         </li>
                     ))}
                 </ul>
