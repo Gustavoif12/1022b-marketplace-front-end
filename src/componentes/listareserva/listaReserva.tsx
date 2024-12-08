@@ -6,7 +6,7 @@ export default function ListaReserva() {
     const [reservas, setReservas] = useState<any[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:8000/reservas")
+        fetch("https://one022b-marketplace-ienr.onrender.com/reservas")
             .then(response => response.json())
             .then(data => setReservas(data));
     }, []);
