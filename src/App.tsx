@@ -21,11 +21,6 @@ function App() {
             .then(res => res.json())
             .then(setComics);
     }, []);
-    useEffect(() => {
-        fetch("https://one022b-marketplace-ienr.onrender.com/comics")
-            .then(res => res.json())
-            .then(setComics);
-    }, []);
 
     return (
         <>
