@@ -26,13 +26,6 @@ export default function ReservaComic() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(reserva)
-        })
-        fetch("https://one022b-marketplace-ienr.onrender.com/reservas", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(reserva)
         }).then(response => {
             if (response.status === 201) {
                 alert("Reserva feita com sucesso!");

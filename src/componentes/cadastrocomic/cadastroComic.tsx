@@ -32,13 +32,6 @@ export default function CadastroComic() {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(comic)
-        })
-        fetch("https://one022b-marketplace-ienr.onrender.com/comics", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(comic)
         }).then(response => {
             if (response.status === 201) {
                 alert("Comic cadastrada com sucesso!");

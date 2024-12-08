@@ -10,11 +10,6 @@ export default function ListaComic() {
             .then(response => response.json())
             .then(data => setComics(data));
     }, []);
-    useEffect(() => {
-        fetch("https://one022b-marketplace-ienr.onrender.com/comics")
-            .then(response => response.json())
-            .then(data => setComics(data));
-    }, []);
 
     return (
         <>

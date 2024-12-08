@@ -10,11 +10,6 @@ export default function ListaReserva() {
             .then(response => response.json())
             .then(data => setReservas(data));
     }, []);
-    useEffect(() => {
-        fetch("https://one022b-marketplace-ienr.onrender.com/reservas")
-            .then(response => response.json())
-            .then(data => setReservas(data));
-    }, []);
 
     return (
         <>
