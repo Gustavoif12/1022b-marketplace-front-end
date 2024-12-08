@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# Loja Online de Quadrinhos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descrição do tema:
 
-Currently, two official plugins are available:
+- O tema do trabalho é uma loja online de venda de quadrinhos, oferecendo histórias ilustradas de diversos autores e uma ampla variedade de temas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descrição das funcionalidades:
 
-## Expanding the ESLint configuration
+- Cadastro de Comic: Os usuários podem adicionar novos quadrinhos na aplicação, preenchendo informações como título, autor, ano de publicação, editora, sinopse, preço e imagem.
+- Listagem de Comics: Exibe todos os quadrinhos cadastrados, com detalhes como título, imagem, autor, ano de publicação, editora e preço.
+- Cadastro de Reserva: Os usuários podem reservar quadrinhos específicos, informando o nome do comprador, título do quadrinho, forma de pagamento e data da reserva.
+- Listagem de Reservas: Exibe todas as reservas feitas, com informações sobre o nome do comprador, título do quadrinho, forma de pagamento e data da reserva.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Instruções para rodar o projeto localmente:
 
-- Configure the top-level `parserOptions` property like this:
+Baixar ou clonar os repositórios
+- Acesse os repositórios do back-end e do front-end no GitHub e faça o download ou clone os arquivos para o seu computador.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Instalar as dependências
+- Na pasta do back-end, abra o terminal e use o comando npm install. Isso vai instalar todas as bibliotecas e ferramentas necessárias para o projeto funcionar.
+- Depois, faça o mesmo na pasta do front-end.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Iniciar o back-end
+- No terminal, execute o comando npm run dev. Esse comando inicia o servidor em modo de desenvolvimento, permitindo atualizações automáticas quando o código for alterado.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Iniciar o front-end
+- No terminal, execute o comando npm run dev.
+- Depois, abra o link http://localhost:5173/ no navegador para acessar a aplicação.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Configurar o banco de dados
+- Baixe e instale o programa Laragon. Após instalar, abra o Laragon e clique em "Iniciar Tudo".
+- Instale o MySQL Workbench e crie uma conexão chamada localhost.
+- Abra o arquivo banco.sql, que está no back-end, copie o conteúdo e cole em um novo script no MySQL Workbench. Execute o script para criar as tabelas e os dados do banco.
+- Depois de executar, confirme se os dados do banco estão aparecendo corretamente no seu navegador.
