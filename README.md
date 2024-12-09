@@ -25,7 +25,7 @@ Iniciar o back-end
 
 Iniciar o front-end
 - No terminal, execute o comando npm run dev.
-- Depois, abra o "link http://localhost:5173/" no navegador para acessar a aplicação.
+- Depois, abra o link "http://localhost:5173/" no navegador para acessar a aplicação.
 
 Configurar o banco de dados
 - Baixe e instale o programa Laragon. Após instalar, abra o Laragon e clique em "Iniciar Tudo".
