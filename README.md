@@ -33,6 +33,6 @@ Configurar o banco de dados
 - Abra o arquivo banco.sql, que está no back-end, copie o conteúdo e cole em um novo script no MySQL Workbench. Execute o script para criar as tabelas e os dados do banco.
 - Depois de executar, confirme se os dados do banco estão aparecendo corretamente no seu navegador.
 
-## Diagrama mostrando o fluxo de dados entre back-end e front-end:
+## Diagrama mostrando o fluxo de dados:
 
 - Disponível em: "https://drive.google.com/file/d/1qMcQ34i_LFZ4Q_DuBcWuUS8P3mKzTaTD/view?usp=sharing".
