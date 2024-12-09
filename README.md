@@ -25,10 +25,14 @@ Iniciar o back-end
 
 Iniciar o front-end
 - No terminal, execute o comando npm run dev.
-- Depois, abra o link http://localhost:5173/ no navegador para acessar a aplicação.
+- Depois, abra o "link http://localhost:5173/" no navegador para acessar a aplicação.
 
 Configurar o banco de dados
 - Baixe e instale o programa Laragon. Após instalar, abra o Laragon e clique em "Iniciar Tudo".
 - Instale o MySQL Workbench e crie uma conexão chamada localhost.
 - Abra o arquivo banco.sql, que está no back-end, copie o conteúdo e cole em um novo script no MySQL Workbench. Execute o script para criar as tabelas e os dados do banco.
 - Depois de executar, confirme se os dados do banco estão aparecendo corretamente no seu navegador.
+
+## Diagrama mostrando o fluxo de dados entre back-end e front-end:
+
+- Disponível em: "https://drive.google.com/file/d/1qMcQ34i_LFZ4Q_DuBcWuUS8P3mKzTaTD/view?usp=sharing".
