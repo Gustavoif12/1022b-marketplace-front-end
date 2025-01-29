@@ -26,14 +26,14 @@ function App() {
         fetch(`https://one022b-marketplace-ienr.onrender.com/comics/${id}`, {
             method: "DELETE"
         })
-        .then(res => {
-            if (res.status === 200) {
-                alert("Comic excluída com sucesso!");
-                setComics(prevComics => prevComics.filter(comic => comic.id !== id));
-            } else {
-                alert("Erro ao excluir comic!");
-            }
-        });
+            .then(res => {
+                if (res.status === 200) {
+                    alert("Comic excluída com sucesso!");
+                    setComics(prevComics => prevComics.filter(comic => comic.id !== id));
+                } else {
+                    alert("Erro ao excluir comic!");
+                }
+            });
     }
 
     return (
@@ -65,10 +65,15 @@ function App() {
                             <p><b>Sinopse:</b> {comic.sinopse}</p>
                         </div>
                         <div className="actions">
-                            <button onClick={() => handleExcluir(comic.id)} className="botao-excluir">Excluir</button>
-                            <Link to={`/alterar-comic/${comic.id}`} className="botao-alterar">Alterar</Link>
-                            <Link to="/reserva-comic" className="botao-reservar">Reservar</Link>
+                            <div className="reserva-container">
+                                <Link to="/reserva-comic" className="botao-reservar">Reservar</Link>
+                            </div>
+                            <div className="alterar-excluir-container">
+                                <button onClick={() => handleExcluir(comic.id)} className="botao-excluir">Excluir</button>
+                                <Link to={`/alterar-comic/${comic.id}`} className="botao-alterar">Alterar</Link>
+                            </div>
                         </div>
+
                     </div>
                 ))}
             </div>
