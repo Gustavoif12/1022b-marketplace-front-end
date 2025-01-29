@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
+import Header from './componentes/header/header';
 
 type ComicType = {
     id: number;
@@ -38,18 +39,7 @@ function App() {
 
     return (
         <>
-            <header className="site-header">
-                <nav className="navigation">
-                    <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/lista-comic">Comics</Link></li>
-                        <li><Link to="/lista-reserva">Reservas</Link></li>
-                        <li><Link to="/cadastro-comic">Cadastrar Comic</Link></li>
-                        <li><Link to="/reserva-comic">Cadastrar Reserva</Link></li>
-                    </ul>
-                </nav>
-            </header>
-
+         <Header/>
             <h1 className="titulo-lista">X - Comics</h1>
 
             <div className="container-comics">
