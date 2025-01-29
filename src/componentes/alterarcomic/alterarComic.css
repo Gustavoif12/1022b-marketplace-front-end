@@ -1,0 +1,86 @@
+.alterar-comic-container {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 100%;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+  margin-top: 110px;
+  margin-bottom: 50px;
+}
+
+.alterar-comic-container:hover {
+  transform: scale(1.02);
+}
+
+.alterar-comic-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  color: #9E4DDD;
+  font-weight: 600;
+}
+
+.alterar-comic-container div {
+  margin-bottom: 20px;
+}
+
+.alterar-comic-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+}
+
+.alterar-comic-container input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.8em;
+  border: 1px solid #9E4DDD;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #111;
+  color: #fff;
+}
+
+.alterar-comic-container input[type="text"]:focus {
+  border-color: #6A329A;
+  box-shadow: 0 0 5px rgba(54, 68, 87, 0.3);
+  outline: none;
+}
+
+.alterar-comic-container input[type="submit"] {
+  background-color: #9E4DDD;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 8px;
+  padding: 12px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s ease-in-out;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.alterar-comic-container input[type="submit"]:hover {
+  background-color: #7C3CB1;
+  transform: translateY(-2px);
+}
+
+.alterar-comic-container input[type="submit"]:active {
+  background-color: #6A329A;
+  transform: translateY(2px);
+}
+
+.alterar-comic-container .imagem-previa-upload {
+  margin-top: 15px;
+  max-width: 80%;  /* Reduz a largura da imagem prévia */
+  border-radius: 8px;
+  margin: 15px auto;
+  display: block;
+}
