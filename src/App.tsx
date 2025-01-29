@@ -22,6 +22,20 @@ function App() {
             .then(setComics);
     }, []);
 
+    function handleExcluir(id: number) {
+        fetch(`https://one022b-marketplace-ienr.onrender.com/comics/${id}`, {
+            method: "DELETE"
+        })
+        .then(res => {
+            if (res.status === 200) {
+                alert("Comic excluída com sucesso!");
+                setComics(prevComics => prevComics.filter(comic => comic.id !== id));
+            } else {
+                alert("Erro ao excluir comic!");
+            }
+        });
+    }
+
     return (
         <>
             <header className="site-header">
