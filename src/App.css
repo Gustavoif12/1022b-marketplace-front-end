@@ -26,7 +26,7 @@ h1.titulo-lista {
 
 .site-header {
     background-color: #9E4DDD;
-    padding: 15px 0 17px;
+    padding: 15px 0;
     width: 100%;
     position: fixed;
     top: 0;
@@ -93,12 +93,12 @@ h1.titulo-lista {
 }
 
 .comic-item img {
-    display: flex;
     width: 300px;
     height: 450px;
     border-radius: 10px;
     margin: 15px auto;
-    align-items: center;
+    display: block;
+    object-fit: cover;
 }
 
 .p-container {
@@ -107,7 +107,7 @@ h1.titulo-lista {
 }
 
 .p-container::-webkit-scrollbar {
-    width: 0px;
+    width: 0;
 }
 
 .comic-item p {
@@ -117,28 +117,67 @@ h1.titulo-lista {
     text-align: justify;
 }
 
-.botao-reservar {
-    display: block;
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.reserva-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.alterar-excluir-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.botao-reservar,
+.botao-excluir,
+.botao-alterar {
     background-color: #9E4DDD;
     color: white;
-    padding: 12px 25px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
-    margin: 25px auto;
-    width: 220px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+    flex: 1;
+    margin: 0 10px;
 }
 
-.botao-reservar:hover {
+.botao-excluir {
+    background-color: #f5296d;
+}
+
+.botao-reservar:hover,
+.botao-excluir:hover,
+.botao-alterar:hover {
     background-color: #7C3CB1;
-    transform: translateY(-2px);
 }
 
-.botao-reservar:active {
+.botao-excluir:hover {
+    background-color: #ff005d;
+}
+
+.botao-reservar:active,
+.botao-excluir:active,
+.botao-alterar:active {
     background-color: #6A329A;
-    transform: translateY(2px);
+}
+
+.botao-excluir:active {
+    background-color: #C2185B;
 }
 
 @media (max-width: 768px) {
