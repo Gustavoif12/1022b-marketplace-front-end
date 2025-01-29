@@ -64,9 +64,11 @@ function App() {
                             <p><b>Preço:</b> R$ {comic.preco}</p>
                             <p><b>Sinopse:</b> {comic.sinopse}</p>
                         </div>
-                        <Link to="/reserva-comic" className="botao-reservar">
-                            Reservar
-                        </Link>
+                        <div className="actions">
+                            <button onClick={() => handleExcluir(comic.id)} className="botao-excluir">Excluir</button>
+                            <Link to={`/alterar-comic/${comic.id}`} className="botao-alterar">Alterar</Link>
+                            <Link to="/reserva-comic" className="botao-reservar">Reservar</Link>
+                        </div>
                     </div>
                 ))}
             </div>
