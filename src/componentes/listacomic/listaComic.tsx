@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import './listaComic.css';
+import Header from "../header/header";
 
 export default function ListaComic() {
     const [comics, setComics] = useState<any[]>([]);
@@ -13,6 +14,7 @@ export default function ListaComic() {
 
     return (
         <>
+        <Header/>
             <h1>Comics Cadastradas</h1>
             <div className="lista-comic-container">
                 <ul>

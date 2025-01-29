@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import { FormEvent, useState, ChangeEvent, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import './alterarComic.css';
+import Header from "../header/header";
 
 function AlterarComic() {
     const { id } = useParams();
@@ -17,7 +19,7 @@ function AlterarComic() {
                 setImagem(dados.imagem);
             });
     }, [id]);
-    
+
     const navigate = useNavigate();
     const [titulo, setTitulo] = useState("");
     const [autor, setAutor] = useState("");
@@ -78,9 +80,10 @@ function AlterarComic() {
     }
 
     return (
-        <>
-            <main>
-                <div>Alterar Comic {id}</div>
+        <main>
+          <Header/>
+            <div className="alterar-comic-container">
+                <h1>Alterar Comic {id}</h1>
                 <form onSubmit={handleForm}>
                     <div>
                         <label htmlFor="id">ID</label>
@@ -119,8 +122,8 @@ function AlterarComic() {
                         <input type="submit" value="Alterar" />
                     </div>
                 </form>
-            </main>
-        </>
+            </div>
+        </main>
     );
 }
 

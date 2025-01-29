@@ -1,6 +1,7 @@
 import { FormEvent, useState, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import './cadastroComic.css'
+import Header from "../header/header";
 
 export default function CadastroComic() {
     const navigate = useNavigate();
@@ -76,6 +77,7 @@ export default function CadastroComic() {
 
     return (
         <>
+        <Header/>
             <h1>Cadastrar Comics</h1>
             <div className="cadastro-comic-container">
                 <form onSubmit={handleForm}>
