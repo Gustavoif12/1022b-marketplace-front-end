@@ -12,8 +12,8 @@
 - Exclusão de Comic: Os usuários podem excluir quadrinhos cadastrados.
 - Cadastro de Reserva: Os usuários podem reservar quadrinhos específicos, informando o nome do comprador, título do quadrinho, forma de pagamento e data da reserva.
 - Listagem de Reservas: Exibe todas as reservas feitas, com informações sobre o nome do comprador, título do quadrinho, forma de pagamento e data da reserva.
-- Alteração de Reservas: Os usuários podem modificar as informações de reservas já cadastrados.
-- Exclusão de Reservas: Os usuários podem excluir reservas cadastradas.
+- Alteração de Reserva: Os usuários podem modificar as informações de reservas já cadastrados.
+- Exclusão de Reserva: Os usuários podem excluir reservas cadastradas.
 
 ## Instruções para rodar o projeto localmente:
 
