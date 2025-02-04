@@ -9,9 +9,11 @@
 - Cadastro de Comic: Os usuários podem adicionar novos quadrinhos na aplicação, preenchendo informações como título, autor, ano de publicação, editora, sinopse, preço e imagem.
 - Listagem de Comics: Exibe todos os quadrinhos cadastrados, com detalhes como título, imagem, autor, ano de publicação, editora e preço.
 - Alteração de Comic: Os usuários podem modificar as informações de quadrinhos já cadastrados.
-- Exclusão de Comic: Os usuários podem excluir quadrinhos previamente cadastrados.
+- Exclusão de Comic: Os usuários podem excluir quadrinhos cadastrados.
 - Cadastro de Reserva: Os usuários podem reservar quadrinhos específicos, informando o nome do comprador, título do quadrinho, forma de pagamento e data da reserva.
 - Listagem de Reservas: Exibe todas as reservas feitas, com informações sobre o nome do comprador, título do quadrinho, forma de pagamento e data da reserva.
+- Alteração de Reservas: Os usuários podem modificar as informações de reservas já cadastrados.
+- Exclusão de Reservas: Os usuários podem excluir reservas cadastradas.
 
 ## Instruções para rodar o projeto localmente:
 
