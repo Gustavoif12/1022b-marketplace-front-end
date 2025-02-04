@@ -11,6 +11,7 @@ import ListaComic from './componentes/listacomic/listaComic.tsx'
 import ReservaComic from './componentes/reservacomic/reservaComic.tsx'
 import ListaReserva from './componentes/listareserva/listaReserva.tsx'
 import AlterarComic from './componentes/alterarcomic/alterarComic.tsx';
+import AlterarReserva from './componentes/alterarreserva/alterarReserva.tsx';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
     path: "/alterar-comic/:id",
     element: <AlterarComic />,
   },
+  {
+    path: "/alterar-reserva/:id",
+    element: <AlterarReserva />,
+  }
 ]);
 
 createRoot(document.getElementById('root')!).render(

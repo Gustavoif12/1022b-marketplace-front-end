@@ -1,6 +1,7 @@
 import { FormEvent, useState, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import './reservaComic.css'
+import Header from "../header/header";
 
 export default function ReservaComic() {
     const navigate = useNavigate();
@@ -58,6 +59,7 @@ export default function ReservaComic() {
 
     return (
         <>
+        <Header/>
             <h1>Reservar Comics</h1>
             <div className="reserva-comic-container">
                 <form onSubmit={handleForm}>
